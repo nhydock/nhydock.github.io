@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+            @keyframes fade-in {
+                0% { opacity: 0; }
+                30% { opacity: .8; }
+                50% { opacity: .6; }
+                100% { opacity: 1; }
+            }
+
+            html, body {
+                padding: 0;
+                margin: 0;
+                font-size: 18px;
+                font-family: 'Share Tech Mono', monospace;
+                text-shadow: 0px 0px .3em #a03f07;
+                color: #a03f07;
+            }
+
+            html {
+                background-image: url("crt-bg.jpg");
+                background-size: .5 .5;
+            }
+            
+            body {
+                background: rgba(20, 6, 2, 0.98);
+            }
+
+            article {
+                position: relative;
+                margin: 0 auto;
+                padding: 20px;
+                max-width: 800px;
+            }
+
+            article::before {
+                content: '';
+                display: block;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: -50px;
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 67%,rgba(0,0,0,1) 100%);
+                height: 50px;
+            }
+
+            article p, article ul li, table td:first-child {
+                animation-name: fade-in;
+                animation-duration: .4s;
+                animation-delay: .8s;
+                animation-fill-mode: backwards;
+            }
+
+            ul {
+                padding-left: 0;
+                margin-bottom: 2.1em;
+            }
+
+            ul li {
+                margin-left: 2em;
+                margin-bottom: 1em;
+            }
+
+            h1, h2 {
+                display: block;
+                width: 100%;
+                break-after: always;
+                margin-top: 0;
+                color: rgb(255, 174, 0);
+                animation-name: fade-in;
+                animation-duration: .4s;
+                animation-fill-mode: backwards;
+            }
+            
+            h1 {
+                font-size: 2.9em;
+                margin-bottom: 0em;
+            }
+            h2 {
+                font-size: 1.8em;
+                margin-top: 1em;
+                margin-bottom: .5em;
+            }
+
+            #copyright {
+                text-align: center;
+                padding-top: 3rem;
+            }
+
+            #copyright > span {
+                width: 100%;
+                display: block;
+            }
+
+            .game, .embedly-card {
+                width: 50%;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+
+            a[href], table td {
+                color: rgb(255, 174, 0);
+                animation-name: fade-in;
+                animation-duration: .4s;
+                animation-fill-mode: backwards;
+                animation-delay: 1.8s;
+            }
+
+            table td:first-child {
+                color: #a03f07;
+            }
+        </style>
+
+        <script>
+            window.addEventListener("load", loaded);
+            function loaded() {
+                document.querySelectorAll('.js-loading').forEach(e => e.classList.remove('js-loading'));
+            }
+        </script>
+    </head>
+    <body>
+        <article>
+            <section id="about">
+                <h1>Nicholas Hydock</h1>
+                <p>
+                    Game Developer, Full-Stack Engineer, and Artist on a budget.
+                </p>
+                <p>
+                    I'm make most of the games and software as part of LunaRed.
+                    <br>
+                    Anything that I do or say should be taken as my own opinion and not that of where I work.
+                </p>
+                <p>
+                    Currently employed by <a href="https://themeetgroup.com">The Meet Group</a>
+                </p>
+                
+                <p aria-labelledby="contact">
+                    <a href="https://twitter.com/nhydock">twitter</a>
+                    •
+                    <a href="https://www.linkedin.com/in/nhydock/">linkedin</a>
+                    •
+                    <a href="https://www.github.com/nhydock/">github</a>
+                </p>
+            </section>
+            <section id="games">
+                <h2>Games</h2>
+                <ul>
+                    <li>
+                        <a href="https://nhydock.itch.io/adventure">A:/dventure</a>
+                        <br>
+                        A budget RPG about dungeons and data (in-development)
+                    </li>
+                    <li>
+                        <a href="https://craft.luna.red/">C:/raft</a>
+                        <br>
+                        Roguelike with excessive amounts of procgen.  Silly and simple, but still delightfully punishing
+                    </li>
+                    <li>
+                        <a href="https://nhydock.itch.io/dungeon64">Dungeon64</a>
+                        <br>
+                        Game jam dungeon crawler with a unique battle system (LowResJam 2018)
+                    </li>
+                    <li>
+                        <a href="https://nhydock.itch.io/drink">Drink</a>
+                        <br>
+                        Simple one button game, has been recreated several times as I teach myself new game engines.
+                    </li>
+                    <li>
+                        <a href="https://nhydock.itch.io/bitshift">Bitshift</a>
+                        <br>
+                        Another game jam project, done in only a few hours.  Have fun with math (LowResJam 2018)
+                    </li>
+                    <li>
+                        <a href="https://nhydock.itch.io/key2joy">Key2Joy</a>
+                        <br>
+                        A relaxing, atmospheric compliment engine idle game.  Tap to change the mood and unlock more compliments.
+                    </li>
+                    <li>
+                        <a href="http://games.luna.red/">
+                            View More 
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="software">
+                <h2>Software</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/lunared/ftmp3">FTMP3</a>
+                        <br>
+                        Minimalist web interface for browsing music files on a server and listening to them
+                    </li>
+                    <li>
+                        <a href="https://github.com/lunared/ftimg">FTIMG</a>
+                        <br>
+                        Minimalist web interface for browsing grouped image files on a server.  Perfect for comics and manga
+                    </li>
+                    <li>
+                        <a href="https://github.com/nhydock/wing-db">Wing-DB</a>
+                        <br>
+                        A collaborative database for tracking restaraunts where you can buy chicken wings.
+                    </li>
+                    <li>
+                        <a href="https://github.com/lunared/anime-underground">Anime-Underground</a>
+                        <br>
+                        Basic web interface for an nginx-rtmp server with the emphasis of tracking Anime watched with friends.  Fetches series metadata from Kitsu.io
+                    </li>
+                    <li>
+                        <a href="https://github.com/nhydock/boogie">Boogie</a>
+                        <br>
+                        A configurable launcher and updater to package with a game.  Originally used by C:/raft for providing a method of synchronizing updates across distribution platforms.
+                    </li>
+                    <li>
+                        <a href="http://github.com/nhydock">
+                            View More by @nhydock
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://github.com/lunared">
+                            View More by @lunared
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="copyright">
+                <span>© 2019-2020 <a href="http://luna.red">LunaRed</a></span>
+            </section>
+        </article>
+        <script>
+            window.scrollTo(0, 0);
+        </script>
+    </body>
+</html>
